@@ -1,0 +1,54 @@
+body{
+    background-color:black;
+    font-family: "Kosugi Maru", sans-serif;
+   
+}
+
+h1{
+    font-size: 40px;
+    text-shadow: 3px 3px rgb(206, 192, 192);
+}
+h2{
+    font-size: 30px;
+    text-shadow: 3px 3px rgb(206, 192, 192);
+}  
+.register-display{
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: 10px 5px 5px rgb(153, 146, 146);
+    text-align: center;
+    margin: 50px auto;
+    width: 600px;
+    padding: 30px;
+}
+.fount-group{
+    margin: 10px;
+}
+label{
+    display: inline-block;
+    width: 160px;
+    text-align: left;
+    font-size: 20px;
+    text-shadow: 3px 3px rgb(206, 192, 192);
+}
+
+input{
+    padding: 4px;
+    border-radius: 5px;
+    width: 200px;
+    border-block-end-width: 4px;
+    background-color: aliceblue;
+}
+button{
+    padding: 5px 55px;
+    background-color: azure;
+    border-radius: 3px;
+}
+
+.link{
+    margin-top: 10px;
+}
+footer{
+    margin-top: 20px;
+}
