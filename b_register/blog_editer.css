@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: rgba(255, 255, 255, .7);
+    height: 5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    box-shadow: 10px 10px 10px;
+}
+.logo{
+    margin-top: 5px;
+    padding-left: 30px;
+}
+
+.menu {
+    text-align: right;
+    color: white;
+}
+a{
+   color: white;
+   
+}
+.list1{
+ 
+    margin-right: 30px;
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.list2{
+    
+     margin-right: 30px;
+     font-size: 25px;
+     padding-top: 10px;
+}
+.list3{
+   
+     margin-right: 30px;
+     font-size: 25px;
+     padding-top: 10px;
+}
+
+
+body{
+    font-family: "Kosugi Maru", sans-serif;
+    min-height: 100vh;
+    background-color: rgb(41, 38, 38);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(232, 239, 247),black);
+    clip-path: circle(61% at 15% 27%);
+    z-index: -1;
+}
+body::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(232, 239, 247),black);
+    clip-path: circle(30.3% at 86% 100%);
+    z-index: -1;
+}
+.card{
+    border-top: 1px solid rgba(255, 255, 255);
+    border-left: 1px solid rgba(255, 255, 255);
+    width: 380px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 15px 15px 50px rgba(222, 212, 212, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+}
+.card .content{
+    transform: translateY(200px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.card:hover .content{
+    transform: translateY(0);
+    opacity: 1;
+}
+h2{
+    padding: 10px;
+}
+label{
+    padding-bottom: 10px;
+    display: inline-block;
+    width: 160px;
+    text-align: left;
+    font-size: 20px;
+    text-shadow: 10px 10px 3px white;
+}
+input{
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(187, 194, 194);
+    margin-bottom: 10px;
+}
+select{
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(187, 194, 194);
+    border: none;
+}
+textarea{
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    margin-top: 30px;
+    background-color: rgb(187, 194, 194);
+    padding-top: 50px;
+    border: none;
+}
+.btn1{
+    width: 60px;
+    background-color: rgb(187, 194, 194);
+    border-radius: 3px;
+}
+.btn2{
+    width: 60px;
+    background-color: rgb(187, 194, 194);
+    border-radius: 3px;
+}
+footer{
+    height: 5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    bottom: 0;
+   text-align: center;
+   color: white;
+}
