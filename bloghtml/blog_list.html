@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="blog_list.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="logo">
+            <img src="/bji.png" width="70px" alt="B_photo">
+        </nav>
+        <nav class="menu">
+            <ul>
+                <li class="list1"></li>
+                <li class="list2"><a href="#" style="text-decoration: none;">blogRegister</a></li>
+                <li class="list3"><a href="#" style="text-decoration: none;">blogEdit</a></li>
+                <li class="list4"><a href="#" style="text-decoration: none;">logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="card">
+        <section class="content">
+            <h2>ブログ一覧</h2>
+            <div></div>
+        </section>
+    </main>
+    <footer>
+        <small>copyright&copy;B.blog</small>
+    </footer>
+    <script src="./vanilla-tilt12.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare":0.8,
+        });
+    </script>
+</body>
+</html>

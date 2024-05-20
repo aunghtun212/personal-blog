@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="login-display">
+        <header>
+            <h1><th:img src="@{/image/bji.png}" width="40px" height="40px" alt="Bji">blog</h1>
+        </header>
+        <main>
+            <section class="login">
+                <h2>login</h2>
+                <form th:action="@{/user/login/process}" method="post">
+                    <div class="fount-group">
+                        <label for="name">name</label>
+                        <input type="text" name="userName" id="name" placeholder="名前" required>
+                    </div>
+                    <div class="fount-group">
+                        <label for="email">email</label>
+                        <input type="text" name="userEmail" id="email" placeholder="メールアドレス" required>
+                    </div>
+                    <div class="fount-group">
+                        <label for="password">password</label>
+                        <input type="password" name="password" id="password" placeholder="パスワード" required>
+                    </div>
+                    <div >
+                        <button>login</button>
+                    </div>
+                    <div class="link">
+                        <a th:href="@{register.html}" target="_blank">登録されてない方はこちら</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <small>copyright&copy;B.blog</small>
+        </footer>
+    </div>
+</body>
+
+</html>

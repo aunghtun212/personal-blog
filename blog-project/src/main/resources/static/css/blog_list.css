@@ -44,7 +44,12 @@ a{
      font-size: 25px;
      padding-top: 10px;
 }
-
+.list4{
+   
+    margin-right: 30px;
+    font-size: 25px;
+    padding-top: 10px;
+}
 
 body{
     font-family: "Kosugi Maru", sans-serif;
@@ -96,53 +101,11 @@ body::after {
     transform: translateY(0);
     opacity: 1;
 }
-h2{
+h2{  
     margin-bottom: 50px;
     text-shadow: 10px 10px 3px white;
 }
-label{
-    padding-bottom: 10px;
-    display: inline-block;
-    width: 160px;
-    text-align: left;
-    font-size: 20px;
-    text-shadow: 10px 10px 3px white;
-}
-input{
-    width: 200px;
-    height: 25px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(187, 194, 194);
-    margin-bottom: 10px;
-}
-select{
-    width: 200px;
-    height: 25px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    background-color: rgb(187, 194, 194);
-    border: none;
-}
-textarea{
-    width: 200px;
-    height: 25px;
-    border-radius: 5px;
-    margin-top: 30px;
-    background-color: rgb(187, 194, 194);
-    padding-top: 50px;
-    border: none;
-}
-.btn1{
-    width: 60px;
-    background-color: rgb(187, 194, 194);
-    border-radius: 3px;
-}
-.btn2{
-    width: 60px;
-    background-color: rgb(187, 194, 194);
-    border-radius: 3px;
-}
+
 footer{
     height: 5rem;
     position: fixed;
