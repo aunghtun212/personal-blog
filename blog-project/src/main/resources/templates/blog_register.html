@@ -5,36 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ブログ登録</title>
-    <link rel="stylesheet" href="blog_register.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/blog_register.css}">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap}" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <nav class="logo">
-            <img src="/bji.png" width="70px" alt="B_photo">
+            <img th:src="@{/image/bji.png}" width="70px" alt="B_photo">
         </nav>
         <nav class="menu">
             <ul >
-                <li class="list1"></li>
-                <li class="list2"><a href="#" style="text-decoration: none;">blogList</a></li>
-                <li class="list3"><a href="#" style="text-decoration: none;">logout</a></li>
+                <li class="list1" th:text="'ようこそ！'+${userName} +'さん'"></li>
+                <li class="list2"><a th:href="@{/blog/list}" style="text-decoration: none;">blogList</a></li>
+                <li class="list3"><a th:href="@{/user/logout}" style="text-decoration: none;">logout</a></li>
             </ul>
         </nav>
     </header>
     <main class="card">
         <section class="content">
             <h2>ブログ登録画面</h2>
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form th:action="@{/blog/register/process}" method="post" enctype="multipart/form-data">
                 <div>
                     <label for="blog-title">blog title</label>
-                    <input type="text" name="blog-title" id="blog-title" required>
+                    <input type="text" name="blogTitle" id="blog-title" required>
                 </div>
                 <div>
                     <label for="category">category</label> 
-                    <select name="category" id="category">
+                    <select name="categoryName" id="category">
                         <option value="消しゴム">消しゴム</option>
                         <option value="鉛筆">鉛筆</option>
                         <option value="シャープパン">シャープパン</option>
@@ -58,7 +58,7 @@
     <footer>
         <small>copyright&copy;B.blog</small>
     </footer>
-    <script src="./vanilla-tilt.js"></script>
+    <script th:src="@{/js/vanilla-tilt.js}"></script>
     <script type="text/javascript">
         VanillaTilt.init(document.querySelector(".card"), {
             max: 25,

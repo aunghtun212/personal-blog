@@ -6,8 +6,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import blog.example.model.entity.Blog;
+import jakarta.transaction.Transactional;
 
 @Repository
+@Transactional
 public interface BlogDao extends JpaRepository<Blog, Long> {
 
 	//保存処理と更新処理insert and update

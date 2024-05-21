@@ -1,17 +1,24 @@
 package blog.example.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import blog.example.model.entity.Blog;
 import blog.example.model.entity.User;
+import blog.example.service.BlogService;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class BlogListController {
 	@Autowired
 	private HttpSession session;
+	
+	@Autowired
+	private BlogService blogService;
 
 	//ブログ一覧画面を表示
 	@GetMapping("/blog/list")
@@ -23,7 +30,10 @@ public class BlogListController {
 		if(user==null) {
 			return "redirect:/user/login";
 		}else {
-			model.addAttribute("userName", user.getUserEmail());
+			//ブログの情報を取得する
+			List<Blog> blogList = blogService.selectAllBlogList(user.getUserId());
+			model.addAttribute("userName", user.getUserName());
+			model.addAttribute("blogList", blogList);
 			return "blog_list.html";
 		}
 	}

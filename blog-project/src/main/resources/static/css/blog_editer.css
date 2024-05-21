@@ -143,6 +143,12 @@ textarea{
     background-color: rgb(187, 194, 194);
     border-radius: 3px;
 }
+.btn3{
+	padding-top: 10px;
+	width: 60px;
+    background-color: rgb(187, 194, 194);
+    border-radius: 3px;
+}
 footer{
     height: 5rem;
     position: fixed;

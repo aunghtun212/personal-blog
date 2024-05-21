@@ -16,9 +16,9 @@
         </nav>
         <nav class="menu">
             <ul>
-                <li class="list1" th:text="${userName}"></li>
-                <li class="list2"><a href="#" style="text-decoration: none;">blogRegister</a></li>
-                <li class="list3"><a href="#" style="text-decoration: none;">blogEdit</a></li>
+                <li class="list1" th:text="'ようこそ！'+${userName} +'さん'"></li>
+                <li class="list2"><a th:href="@{/blog/register}" style="text-decoration: none;">blogRegister</a></li>
+                <li class="list3"><a th:href="@{/blog/edit}" style="text-decoration: none;">blogEdit</a></li>
                 <li class="list4"><a th:href="@{/user/logout}" style="text-decoration: none;">logout</a></li>
             </ul>
         </nav>
@@ -26,7 +26,15 @@
     <main class="card">
         <section class="content">
             <h2>ブログ一覧</h2>
-            <div></div>
+			<ul>
+			  <li th:each="blog:${blogList}">
+			    <a th:href="@{/blog/edit/{blogId}(blogId=${blog.blogId})}">
+					<img th:src="@{/blog-img/{imagePath}(imagePath=${blog.blogImage})}" alt="">
+					<p th:text="${blog.blogTitle}"></p><br>
+					<p th:text="${blog.categoryName}"></p>
+				</a>
+			   </li>
+			 </ul>
         </section>
     </main>
     <footer>

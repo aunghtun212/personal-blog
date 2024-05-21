@@ -1,4 +1,4 @@
-package blog.example.model.entity;
+ package blog.example.model.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
