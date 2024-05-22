@@ -82,13 +82,14 @@ public class BlogEditController {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			if(blogService.blogUpdate(blogId, blogTitle, categoryName, 
+					fileName, article, user.getUserId())) {
+				return "redirect:/blog/list";
+			}else {
+				return "redirect:/blog/edit";
+			}
 		}
-		if(blogService.blogUpdate(blogId, blogTitle, categoryName, 
-				categoryName, article, user.getUserId())) {
-			return "redirect:/blog/list";
-		}else {
-			return "redirect:/blog/edit";
-		}
+		
 	}
 	
 }

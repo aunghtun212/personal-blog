@@ -11,6 +11,9 @@ header {
     z-index: 100;
     top: 0;
     box-shadow: 10px 10px 10px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
 }
 .logo{
     margin-top: 5px;
@@ -18,11 +21,12 @@ header {
 }
 
 .menu {
-    text-align: right;
-    color: white;
+    display: flex;
+    gap: 0 1.5rem;
+    text-align: right; 
 }
 a{
-   color: white;
+   color:black;
    
 }
 .list1{
@@ -144,7 +148,7 @@ textarea{
     border-radius: 3px;
 }
 .btn3{
-	padding-top: 10px;
+	 margin-top: 10px;
 	width: 60px;
     background-color: rgb(187, 194, 194);
     border-radius: 3px;

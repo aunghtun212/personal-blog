@@ -3,6 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+.list1{
+    animation-name: animations;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes animations{
+    0%{
+        opacity: 0;
+        transform: translateX(-700px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 header {
     background-color: rgba(255, 255, 255, .7);
     height: 5rem;
@@ -11,6 +30,9 @@ header {
     z-index: 100;
     top: 0;
     box-shadow: 10px 10px 10px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
 }
 .logo{
     margin-top: 5px;
@@ -18,11 +40,12 @@ header {
 }
 
 .menu {
-    text-align: right;
-    color: white;
+    display: flex;
+    gap: 0 1.5rem;
+    text-align: right; 
 }
 a{
-   color: white;
+   color: black;
    
 }
 .list1{

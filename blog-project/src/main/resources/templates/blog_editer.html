@@ -12,11 +12,11 @@
 
 <body>
     <header>
-        <nav class="logo">
+        <div class="logo">
            <img th:src="@{/image/bji.png}" width="70px" alt="B_photo">
-        </nav>
+        </div>
         <nav class="menu">
-            <ul >
+            <ul class="menu" style="list-style: none;">
                 <li class="list1" th:text="'ようこそ！'+${userName} +'さん'"></li>
                 <li class="list2"><a th:href="@{/blog/list}" style="text-decoration: none;">blogList</a></li>
                 <li class="list3"><a th:href="@{/user/logout}" style="text-decoration: none;">logout</a></li>
@@ -54,9 +54,9 @@
                 </div>
             </form>
 			<form th:action="@{/blog/delete}" method="post">
-				<div class="btn3">
+				<div>
 					<input type="hidden" name="blogId" th:value="${blog.blogId}">
-					<button>削除</button>
+					<button class="btn3">削除</button>
 				</div>
 			</form>
         </section>

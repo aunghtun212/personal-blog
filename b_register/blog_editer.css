@@ -11,18 +11,25 @@ header {
     z-index: 100;
     top: 0;
     box-shadow: 10px 10px 10px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
 }
 .logo{
     margin-top: 5px;
     padding-left: 30px;
 }
 
+
 .menu {
-    text-align: right;
-    color: white;
+   
+    display: flex;
+    gap: 0 1.5rem;
+    text-align: right; 
+   
 }
 a{
-   color: white;
+   color: rgb(19, 1, 1);
    
 }
 .list1{
@@ -86,6 +93,7 @@ body::after {
     border-radius: 15px;
     box-shadow: 15px 15px 50px rgba(222, 212, 212, 0.5);
     background: rgba(255, 255, 255, 0.1);
+    
 }
 .card .content{
     transform: translateY(200px);
@@ -140,6 +148,12 @@ textarea{
 }
 .btn2{
     width: 60px;
+    background-color: rgb(187, 194, 194);
+    border-radius: 3px;
+}
+.btn3{
+    margin-top: 10px;
+	width: 60px;
     background-color: rgb(187, 194, 194);
     border-radius: 3px;
 }
