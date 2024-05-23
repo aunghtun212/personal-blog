@@ -31,21 +31,21 @@ a{
 }
 .list1{
  
-    margin-right: 30px;
-    font-size: 25px;
+    margin-right: 20px;
+    font-size: 20px;
     padding-top: 10px;
 }
 
 .list2{
     
-     margin-right: 30px;
-     font-size: 25px;
+     margin-right: 20px;
+     font-size: 20px;
      padding-top: 10px;
 }
 .list3{
    
-     margin-right: 30px;
-     font-size: 25px;
+     margin-right: 20px;
+     font-size: 20px;
      padding-top: 10px;
 }
 
@@ -142,13 +142,15 @@ textarea{
     background-color: rgb(187, 194, 194);
     border-radius: 3px;
 }
-.btn2{
-    width: 60px;
+.back-btn{
+	width: 60px;
     background-color: rgb(187, 194, 194);
     border-radius: 3px;
 }
+
+
 .btn3{
-	 margin-top: 10px;
+	margin-top: 10px;
 	width: 60px;
     background-color: rgb(187, 194, 194);
     border-radius: 3px;

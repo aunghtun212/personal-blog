@@ -20,4 +20,6 @@ public interface UserDao extends JpaRepository<User, Long> {
 	
 	//ユーザー情報一覧を取得
 	List<User> findAll();
+	
+	User findByUserId(Long userId);
 }

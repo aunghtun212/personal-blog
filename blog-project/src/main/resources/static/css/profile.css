@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+body{
+    height: 100vh;
+    font-family: "Kosugi Maru", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+h1{
+    text-align: center;
+   
+}
+
+
+.head .prof{
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+}
+.head .prof:before{
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #ef1548;
+    position: absolute;
+    top: 27px;
+    left: -100px;
+
+}
+.head .prof::after{
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #ef1548;
+    position: absolute;
+    top: 27px;
+    right: -100px;
+}
+input{
+    width: 200px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+label{
+    padding: 10px;
+}
+.btn1{
+    margin-top: 10px;
+    width: 80px;
+    height: 30px;
+}
+
+.back-btn{
+	margin-top: 10px;
+    width: 80px;
+    height: 30px;
+}
+
+.box{
+   box-shadow: 5px 5px 15px 3px;
+   border-radius: 10px;
+    width: 500px;
+    height: 450px;
+   text-align: center;
+   padding-top: 30px;
+
+}
+footer{
+    margin-top: 30px;
+    text-align: center;
+}
+h2{
+   
+    margin-bottom: 30px;
+    
+}

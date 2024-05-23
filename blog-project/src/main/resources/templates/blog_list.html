@@ -16,7 +16,9 @@
         </div>
         <nav >
            <ul class="menu" style="list-style: none;">
-                <li class="list1" th:text="'ようこそ！'+${userName} +'さん'"></li>
+                <li class="list1" th:text="'welcome- '+${userName}"></li>
+				<li class="list2"><a th:href="@{/profile/register}" style="text-decoration: none;">profileRegister</a></li>
+				<li class="list2"><a th:href="@{/profile/list}" style="text-decoration: none;">profile</a></li>
                 <li class="list2"><a th:href="@{/blog/register}" style="text-decoration: none;">blogRegister</a></li>
                 <li class="list3"><a th:href="@{/user/logout}" style="text-decoration: none;">logout</a></li>
             </ul>

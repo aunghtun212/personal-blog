@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己紹介list</title>
+    <link rel="stylesheet" th:href="@{/css/profile_list.css}">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap}" rel="stylesheet">
+</head>
+<body>
+    <div class="display">
+    <header class="head">
+        <h1 class="prof">profile</h1>
+    </header>
+    <main>
+        <section class="box">
+            <h2>自己紹介ボート</h2>
+			<ul style="list-style: none;">
+				<li >
+					<p th:text="${name}"></p><br>
+				    <p th:text="${birthday}"></p><br>
+					<p th:text="${selfIntroduction}"></p>
+					
+				</li>
+			</ul>
+			<button class="back-btn"  onclick="history.back();" type="button">戻る</button>
+            <!--<form action="#" method="post" >
+                <div class="name">
+                    
+                    <input type="text" name="name" id="name" placeholder="名前" required>
+                </div>
+                <div class="birthday">
+                    <label for="birthday">birthday</label>
+                </div>
+                <div class="date">
+                    <br>
+                    <input type="date" name="birthday" id="birthday" placeholder="誕生日" required>
+                </div>
+                <div>
+                    <textarea name="self_introduction" id="self_introduction" cols="30" rows="10" placeholder="自己紹介"></textarea>
+                </div>
+                <div>
+                    <button>送信</button>
+                </div>
+            </form>-->			
+        </section>
+    </main>
+    <footer>
+        <small>copyright&copy;B.blog</small>
+    </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="./js/common.js"></script>
+</body>
+</html>

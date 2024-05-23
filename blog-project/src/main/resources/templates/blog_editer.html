@@ -50,7 +50,7 @@
                 <div>
 					<input type="hidden" name="blogId" th:value="${blog.blogId}">
                     <button class="btn1">更新</button>
-                    <button class="btn2">戻る</button>
+                    <button class="back-btn"  onclick="history.back();" type="button">戻る</button>
                 </div>
             </form>
 			<form th:action="@{/blog/delete}" method="post">
@@ -73,6 +73,9 @@
             "max-glare":0.8,
         });
     </script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="./js/common.js"></script>
 </body>
 
 </html>
