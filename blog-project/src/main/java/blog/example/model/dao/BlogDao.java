@@ -7,8 +7,10 @@ import org.springframework.stereotype.Repository;
 
 import blog.example.model.entity.Blog;
 import jakarta.transaction.Transactional;
-
+//Springにdaoクラスのお知らせアノテーション
 @Repository
+
+//DBに対して一連の操作をひとまとめにする
 @Transactional
 public interface BlogDao extends JpaRepository<Blog, Long> {
 

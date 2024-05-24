@@ -14,7 +14,7 @@
 <body>
     <div  class="register-display">
         <header>
-            <h1><img th:src="@{/image/bji.png}" width="40px" alt="Bji">blog</h1>
+            <h1><img th:src="@{/image/bji.png}" width="30px" alt="Bji">blog</h1>
         </header>
         <main>
             <h2>register</h2>
@@ -55,7 +55,7 @@
                         <button>register</button>
                     </div>
                     <div  class="link">
-                        <a href="login.html" target="_blank">ログイン画面へ</a>
+                        <a th:href="@{http://localhost:8080/user/login}">ログイン画面へ</a>
                     </div>
                 </form>
             </section>

@@ -8,8 +8,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import blog.example.service.UserService;
 
+//Springにコントローラークラスのお知らせアノテーション
 @Controller
 public class UserRegisterController {
+	/*
+	 * @Autowiredアノテーションを使って 
+	 * userService 変数を用意してuserService クラスのメソッド使えるようにする
+	 */
 	@Autowired
 	private UserService userService;
 	//登録画面の表示

@@ -10,11 +10,18 @@ import blog.example.model.entity.User;
 import blog.example.service.UserService;
 import jakarta.servlet.http.HttpSession;
 
+//Springにコントローラークラスのお知らせアノテーション
 @Controller
 public class UserLoginController {
+	/*
+	 * @Autowiredアノテーションを使って 
+	 * userService 変数を用意してuserService クラスのメソッド使えるようにする
+	 */
 	@Autowired
 	private UserService userService;
 	
+	//@Autowiredアノテーションを使って
+	//session変数を用意してSessionのユーザ情報を取得できるようにする
 	@Autowired
 	private HttpSession session;
 	

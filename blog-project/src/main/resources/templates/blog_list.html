@@ -16,7 +16,7 @@
         </div>
         <nav >
            <ul class="menu" style="list-style: none;">
-                <li class="list1" th:text="'welcome- '+${userName}"></li>
+                <li class="list1" th:text="'welcome '+${userName}"></li>
 				<li class="list2"><a th:href="@{/profile/register}" style="text-decoration: none;">profileRegister</a></li>
 				<li class="list2"><a th:href="@{/profile/list}" style="text-decoration: none;">profile</a></li>
                 <li class="list2"><a th:href="@{/blog/register}" style="text-decoration: none;">blogRegister</a></li>
@@ -27,12 +27,13 @@
     <main class="card">
         <section class="content">
             <h2>ブログ一覧</h2>
-			<ul>
+			<ul style="list-style: none;">
 			  <li th:each="blog:${blogList}">
 			    <a th:href="@{/blog/edit/{blogId}(blogId=${blog.blogId})}">
 					<img th:src="@{/blog-img/{imagePath}(imagePath=${blog.blogImage})}" alt="">
 					<p th:text="${blog.blogTitle}"></p><br>
-					<p th:text="${blog.categoryName}"></p>
+					<p th:text="${blog.categoryName}"></p><br>
+					<p th:text="${blog.article}"></p>
 				</a>
 			   </li>
 			 </ul>

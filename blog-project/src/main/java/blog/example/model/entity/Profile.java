@@ -6,26 +6,33 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.Data;
 
+
+//SpringにEntityクラスのお知らせアノテーション
 @Entity
 public class Profile {
+	//テーブルのID
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private Long profileId;
 	
+	//テーブルコラムnameをキャメルケース
 	private String name;
 	
+	//テーブルコラムbirthdayをキャメルケース
 	private Date birthday;
 	
+	//テーブルコラムself_introductionをキャメルケース
 	private String selfIntroduction;
 	
+	//テーブルコラムuser_idをキャメルケース
 	private Long userId;
 
 	//空のコンストラクタ
 	public Profile() {
 	}
 
+	//コンストラクタ
 	public Profile(String name, Date birthday, String selfIntroduction, Long userId) {
 		this.name = name;
 		this.birthday = birthday;
@@ -33,6 +40,7 @@ public class Profile {
 		this.userId = userId;
 	}
 
+	//ゲッターとセッター
 	public Long getProfileId() {
 		return profileId;
 	}

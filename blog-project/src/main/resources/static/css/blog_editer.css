@@ -1,8 +1,15 @@
+/*全要素を*でmargin とpadding設定*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/*ヘッダーの高さ背景色設定position fixedで画面の上(top)に配置幅の設定
+z-index 100で重ねてる背景画面の上に持っていく　top 0で親よその上と同じに配置
+box shadow　でヘッダーの下に影を作る
+align item center で文字を真ん中にする
+justify content space between で文字を並ぶ*/
 header {
     background-color: rgba(255, 255, 255, .7);
     height: 5rem;
@@ -15,6 +22,8 @@ header {
     align-items: center; 
     justify-content: space-between;
 }
+
+/*logo写真の配置*/
 .logo{
     margin-top: 5px;
     padding-left: 30px;
@@ -25,31 +34,34 @@ header {
     gap: 0 1.5rem;
     text-align: right; 
 }
+
+/*aタグの文字を黒に設定*/
 a{
    color:black;
    
 }
+
+/*listの配置フォントサイズ設定*/
 .list1{
- 
     margin-right: 20px;
     font-size: 20px;
     padding-top: 10px;
-}
+    }
 
-.list2{
-    
+.list2{   
      margin-right: 20px;
      font-size: 20px;
      padding-top: 10px;
 }
-.list3{
-   
+.list3{  
      margin-right: 20px;
      font-size: 20px;
      padding-top: 10px;
 }
 
-
+/*bodyタグのfont、高さ　背景色　中の要素を真ん中に 設定
+align item center 縦に対して真ん中に中央揃え
+justify-content:center横に対して真ん中に中央揃え*/
 body{
     font-family: "Kosugi Maru", sans-serif;
     min-height: 100vh;
@@ -60,6 +72,9 @@ body{
 
 }
 
+/*before after で背景を2重にする
+背景色設定z index で隠れた文字を背景画面の上側に設定左側の丸背景
+clippathで丸背景を作る*/
 body::before {
     content: "";
     position: absolute;
@@ -69,6 +84,10 @@ body::before {
     clip-path: circle(61% at 15% 27%);
     z-index: -1;
 }
+
+/*before after で背景を2重にする
+背景色設定z index で隠れた文字を背景画面の上側に設定右側の丸背景
+clippathで丸背景を作る*/
 body::after {
     content: "";
     position: absolute;
@@ -78,6 +97,9 @@ body::after {
     clip-path: circle(30.3% at 86% 100%);
     z-index: -1;
 }
+
+/*カードの形作る幅と高さ設定左側と上のborderを白くします
+boxshadowでカードの影を作る中の文字を中央揃え*/
 .card{
     border-top: 1px solid rgba(255, 255, 255);
     border-left: 1px solid rgba(255, 255, 255);
@@ -91,6 +113,9 @@ body::after {
     box-shadow: 15px 15px 50px rgba(222, 212, 212, 0.5);
     background: rgba(255, 255, 255, 0.1);
 }
+
+/*中の文字をアニメーション追加
+カードに:hoverした時に文字が下から出てくるように設定*/
 .card .content{
     transform: translateY(200px);
     opacity: 0;
@@ -100,10 +125,14 @@ body::after {
     transform: translateY(0);
     opacity: 1;
 }
+
+/*h2タグのに文字に白影追加*/
 h2{
     margin-bottom: 50px;
     text-shadow: 10px 10px 3px white;
 }
+
+/*label タグの、配置設定、影追加*/
 label{
     padding-bottom: 10px;
     display: inline-block;
@@ -112,6 +141,8 @@ label{
     font-size: 20px;
     text-shadow: 10px 10px 3px white;
 }
+
+/*input boxの設定幅高さ　borderの角を丸くする　背景色設定*/
 input{
     width: 200px;
     height: 25px;
@@ -120,6 +151,8 @@ input{
     background-color: rgb(187, 194, 194);
     margin-bottom: 10px;
 }
+
+/*select boxの設定幅高さ　borderの角を丸くする　背景色設定*/
 select{
     width: 200px;
     height: 25px;
@@ -128,6 +161,8 @@ select{
     background-color: rgb(187, 194, 194);
     border: none;
 }
+
+/*textarea boxの設定幅高さ　borderの角を丸くする　背景色設定*/
 textarea{
     width: 200px;
     height: 25px;
@@ -137,6 +172,8 @@ textarea{
     padding-top: 50px;
     border: none;
 }
+
+/*ボータンタグのサイズ色設定*/
 .btn1{
     width: 60px;
     background-color: rgb(187, 194, 194);
@@ -148,13 +185,13 @@ textarea{
     border-radius: 3px;
 }
 
-
 .btn3{
 	margin-top: 10px;
 	width: 60px;
     background-color: rgb(187, 194, 194);
     border-radius: 3px;
 }
+/*フッター*/
 footer{
     height: 5rem;
     position: fixed;

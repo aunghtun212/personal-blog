@@ -6,21 +6,29 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+//SpringにEntityクラスのお知らせアノテーション
 @Entity
+//Spring にテーブルの名前お知らせアノテーション
 @Table(name="blog")
 public class Blog {
+	//テーブルのID
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long blogId;
 	
+	//テーブルコラムblog_titleをキャメルケース
 	private  String blogTitle;
 	
+	//テーブルコラムcategory_nameをキャメルケース
 	private String  categoryName;
 	
+	//テーブルコラムblog_imageをキャメルケース
 	private String blogImage;
 	
+	//テーブルコラムarticleをキャメルケース
 	private String article;
 	
+	//テーブルコラムuser_idをキャメルケース
 	private Long userId;
 
 	//空のコンストラクタ

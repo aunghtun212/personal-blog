@@ -8,8 +8,13 @@ import org.springframework.stereotype.Service;
 import blog.example.model.dao.UserDao;
 import blog.example.model.entity.User;
 
+//SpringにServiceクラスのお知らせアノテーション
 @Service
 public class UserService {
+	/*
+	 * @Autowiredアノテーションを使って 
+	 * userDao 変数を用意してUserDao クラスのメソッド使えるようにする
+	 */
 	@Autowired
 	private UserDao userDao;
 	

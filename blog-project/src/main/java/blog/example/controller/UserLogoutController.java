@@ -6,9 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import jakarta.servlet.http.HttpSession;
 
+//Springにコントローラークラスのお知らせアノテーション
 @Controller
 public class UserLogoutController {
 	
+	//@Autowiredアノテーションを使って
+	//session変数を用意してSessionのユーザ情報を取得できるようにする
 	@Autowired
 	private HttpSession session;
 	

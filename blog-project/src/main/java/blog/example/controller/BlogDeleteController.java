@@ -8,14 +8,18 @@ import blog.example.model.entity.User;
 import blog.example.service.BlogService;
 import jakarta.servlet.http.HttpSession;
 
+//Springにコントローラークラスのお知らせアノテーション
 @Controller
 public class BlogDeleteController {
+	//BlogService のメソッド使いたいのでblogService変数の用意
 	@Autowired
 	private BlogService blogService;
-
+	
+	//Session変数の用意
 	@Autowired
 	private HttpSession session;
 
+	//webブラウザで処理したデータを受け付ける
 	@PostMapping("/blog/delete")
 	public String blogDelete(Long blogId) {
 		// sessionからログインしてる人の情報を取得

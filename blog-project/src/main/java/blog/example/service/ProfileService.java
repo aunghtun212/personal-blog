@@ -10,12 +10,21 @@ import blog.example.model.dao.ProfileDao;
 import blog.example.model.dao.UserDao;
 import blog.example.model.entity.Profile;
 
+//SpringにServiceクラスのお知らせアノテーション
 @Service
 public class ProfileService {
 	
+	/*
+	 * @Autowiredアノテーションを使って 
+	 * userDao 変数を用意してUserDao クラスのメソッド使えるようにする
+	 */
 	@Autowired
 	private UserDao userDao;
 	
+	/*
+	 * @Autowiredアノテーションを使って 
+	 * profileDao 変数を用意してProfileDao クラスのメソッド使えるようにする
+	 */
 	@Autowired
 	private ProfileDao profileDao;
 	

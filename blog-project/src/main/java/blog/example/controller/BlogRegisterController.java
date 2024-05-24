@@ -18,11 +18,18 @@ import blog.example.model.entity.User;
 import blog.example.service.BlogService;
 import jakarta.servlet.http.HttpSession;
 
+//Springにコントローラークラスのお知らせアノテーション
 @Controller
 public class BlogRegisterController {
+	/*
+	 * @Autowiredアノテーションを使って 
+	 * blogService 変数を用意してBlogService クラスのメソッド使えるようにする
+	 */
 	@Autowired
 	private BlogService blogService;
 	
+	//@Autowiredアノテーションを使って
+	//session変数を用意してSessionのユーザ情報を取得できるようにする
 	@Autowired
 	private HttpSession session;
 	

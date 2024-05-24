@@ -20,11 +20,18 @@ import blog.example.model.entity.User;
 import blog.example.service.BlogService;
 import jakarta.servlet.http.HttpSession;
 
+//Springにコントローラークラスのお知らせアノテーション
 @Controller
 public class BlogEditController {
+	/*
+	 * @Autowiredアノテーションを使って 
+	 * blogService 変数を用意してBlogService クラスのメソッド使えるようにする
+	 */
 	@Autowired
 	private BlogService blogService;
 	
+	//@Autowiredアノテーションを使って
+	//session変数を用意してSessionのユーザ情報を取得できるようにする
 	@Autowired
 	private HttpSession session;
 	
@@ -61,12 +68,10 @@ public class BlogEditController {
 			@RequestParam Long blogId) {
 		//sessionからログインしてる人の情報を取得
 		User user = (User) session.getAttribute("loginUserInfo");
-		//もしuserがnullだったらlogin画面にリダイレクトする
-		//そうでない場合は、画像のファイル取得
-		//画像のアップロード
-		//もし、同じファイルの名前がなかったら保存
-		//ブログ一覧画面にリダイレクト
-		//そうでない場合は、ブログ登録画面にとどまります
+		/*
+		 * もしuserがnullだったらlogin画面にリダイレクトする そうでない場合は、画像のファイル取得 画像のアップロード
+		 * もし、同じファイルの名前がなかったら保存 ブログ一覧画面にリダイレクト そうでない場合は、ブログ登録画面にとどまります
+		 */
 		
 		//ファイルの保存
 		// もし、blohUpdateの結果がtrue の場合、blog一覧にリダイレクトする

@@ -8,7 +8,10 @@ import org.springframework.stereotype.Repository;
 import blog.example.model.entity.Profile;
 import jakarta.transaction.Transactional;
 
+//Springにdaoクラスのお知らせアノテーション
 @Repository
+
+//DBに対して一連の操作をひとまとめにする
 @Transactional
 public interface ProfileDao extends JpaRepository<Profile, Long> {
 	

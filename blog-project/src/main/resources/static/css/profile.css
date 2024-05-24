@@ -1,3 +1,4 @@
+/*全要素を*でmargin とpadding設定*/
 *{
     margin: 0;
     padding: 0;
@@ -9,6 +10,9 @@ header{
     margin-bottom: 40px;
 }
 
+/*bodyタグのfont、高さ　中の要素を真ん中に 設定
+align item center 縦に対して真ん中に中央揃え
+justify-content:center横に対して真ん中に中央揃え*/
 body{
     height: 100vh;
     font-family: "Kosugi Maru", sans-serif;
@@ -17,11 +21,14 @@ body{
     justify-content: center;
   
 }
+
+/*h1タグの文字を真ん中に*/
 h1{
-    text-align: center;
-   
+    text-align: center;   
 }
 
+/*before after で線を作る
+*/
 
 .head .prof{
     font-size: 30px;
@@ -58,6 +65,8 @@ input{
 label{
     padding: 10px;
 }
+
+/*ボータンタグのサイズ色設定*/
 .btn1{
     margin-top: 10px;
     width: 80px;
@@ -70,6 +79,7 @@ label{
     height: 30px;
 }
 
+/*boxの形を作る幅高さ設定影追加*/
 .box{
    box-shadow: 5px 5px 15px 3px;
    border-radius: 10px;
@@ -79,12 +89,14 @@ label{
    padding-top: 30px;
 
 }
+
+/*フッター*/
 footer{
     margin-top: 30px;
     text-align: center;
 }
+
 h2{
-   
-    margin-bottom: 30px;
+      margin-bottom: 30px;
     
 }

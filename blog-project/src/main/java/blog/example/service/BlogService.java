@@ -8,8 +8,13 @@ import org.springframework.stereotype.Service;
 import blog.example.model.dao.BlogDao;
 import blog.example.model.entity.Blog;
 
+//SpringにServiceクラスのお知らせアノテーション
 @Service
 public class BlogService {
+	/*
+	 * @Autowiredアノテーションを使って 
+	 * blogDao 変数を用意してBlogDao クラスのメソッド使えるようにする
+	 */
 	@Autowired
 	private BlogDao blogDao;
 	

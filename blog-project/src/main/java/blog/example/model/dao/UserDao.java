@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import blog.example.model.entity.User;
 
+//Springにdaoクラスのお知らせアノテーション
 @Repository
 public interface UserDao extends JpaRepository<User, Long> {
 
